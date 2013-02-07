@@ -1673,6 +1673,16 @@ d3 = function() {
       if (parent) parent.removeChild(this);
     });
   };
+  d3_selectionPrototype.hide = function() {
+    return this.each(function() {
+      this.style.display = 'none';
+    });
+  };
+  d3_selectionPrototype.show = function() {
+    return this.each(function() {
+      this.style.display = 'block';
+    });
+  };
   d3_selectionPrototype.data = function(value, key) {
     var i = -1, n = this.length, group, node;
     if (!arguments.length) {
